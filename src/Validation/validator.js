@@ -11,7 +11,7 @@ const isValidRequestBody = function (reqBody) {
 }
 
 const emailValidation = function (email) {
-    let regexForEmail =/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/ 
+    let regexForEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
     return regexForEmail.test(email)
 }
 
@@ -25,7 +25,7 @@ const isValidPassword = function (password) {
     return regexforpassword.test(password)
 }
 const isValidEnum = function (value) {
-    if (["Maths" , "english" , "Hindi" , "Science"].find(element => element === value)) return true;
+    if (["Maths", "english", "Hindi", "Science"].find(element => element === value)) return true;
     return false;
 }
 
@@ -39,4 +39,4 @@ const isvalidNumber = function (value) {
     if (typeof (value) === 'number') return true
 
 }
-module.exports = { isValid, isValidRequestBody, emailValidation, mobileValidation, isValidPassword, isValidEnum , isValidObjectId, isvalidNumber }
+module.exports = { isValid, isValidRequestBody, emailValidation, mobileValidation, isValidPassword, isValidEnum, isValidObjectId, isvalidNumber }
