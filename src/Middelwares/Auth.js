@@ -27,7 +27,7 @@ const authentication = async function (req, res, next) {
 const authorization = async function (req, res, next) {
     try {
         const decoded = req.decodedToken
-        const { userId } = req.body
+        const userId= req.params.userId
 
         if (userId) {
             if (!(userId.match(/^[0-9a-fA-F]{24}$/)))

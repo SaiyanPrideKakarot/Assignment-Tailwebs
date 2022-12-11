@@ -8,13 +8,13 @@ router.post('/register' , userController.createUser) // register
 
 router.post('/login' , userController.loginUser) // login
 
-router.get('/students', authentication, authorization, studentController.getDetailsByQuery) // list of students acc to query
+router.get('/students/:userId', authentication, authorization, studentController.getDetailsByQuery) // list of students acc to query
 
-router.post('/student' , authentication,studentController.Createstudent ) // add student
+router.post('/student/:userId' , authentication,studentController.Createstudent ) // add student
 
 router.put('/student', authentication, authorization, studentController.updateDetails)// edit details
 
-router.delete('/student', authentication, authorization, studentController.deleteStudents)// edit details
+router.put('/student/:userId', authentication, authorization, studentController.deleteStudents)// edit details
 
 
 module.exports = router;
