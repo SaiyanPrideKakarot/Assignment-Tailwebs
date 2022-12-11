@@ -14,12 +14,11 @@ const marksSchema = new mongoose.Schema({
       enum: ["Maths", "English", "Hindi", "Science"]
    },
 
-   userId: { type: ObjectId, required: true, ref: "User" },
+   userId: { type: ObjectId, ref: "User" },
 
    marks: {
       type: Number,
       required: true
-
    },
 
    isDeleted: {

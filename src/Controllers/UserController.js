@@ -15,7 +15,7 @@ const createUser = async function (req, res) {
         .send({ status: false, message: "please provide input data" });
     }
 
-    const { name, email, password } = requestBody
+    let { name, email, password } = requestBody
 
     if (!isValid(name)) {
       return res
@@ -53,6 +53,10 @@ const createUser = async function (req, res) {
     };
 
     encrytedpassword(securePassword);
+
+    // let encrypt = bcrypt.hash(password, 10, function (err, hash) {
+    //   password = hash
+    // })
 
     const isEmailNotUnique = await UserModel.findOne({ email: email })
 
@@ -147,4 +151,4 @@ const loginUser = async function (req, res) {
 };
 
 
-module.exports = {createUser, loginUser}
+module.exports = { createUser, loginUser }
