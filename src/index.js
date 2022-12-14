@@ -15,7 +15,6 @@ mongoose.connect("mongodb+srv://abhishekprasad:abhiprasad@cluster0.ygncry8.mongo
 app.use('/', route);
 
 app.use((req, res, next) => {
-    
     const error = new Error('/ Path not found /');
     return res.status(400).send({ status: 'ERROR', error: error.message })
 });

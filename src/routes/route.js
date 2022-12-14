@@ -12,9 +12,9 @@ router.get('/students/:userId', authentication, authorization, studentController
 
 router.post('/student/:userId' , authentication,studentController.Createstudent ) // add student
 
-router.put('/student/:userId', authentication, authorization, studentController.updateDetails)// edit details
+router.put('/student/:userId/', authentication, authorization, studentController.updateDetails)// edit details
 
-router.delete('/student/:userId', authentication, authorization, studentController.deleteStudents)// edit details
+router.delete('/student/:userId/', authentication, authorization, studentController.deleteStudents)// edit details
 
 
 module.exports = router;

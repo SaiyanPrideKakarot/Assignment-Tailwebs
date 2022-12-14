@@ -25,7 +25,7 @@ const isValidPassword = function (password) {
     return regexforpassword.test(password)
 }
 const isValidEnum = function (value) {
-    if (["Maths", "english", "Hindi", "Science"].find(element => element === value)) return true;
+    if (["Maths", "English", "Hindi", "Science"].find(element => element === value)) return true;
     return false;
 }
 
