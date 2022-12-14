@@ -60,7 +60,7 @@ const Createstudent = async function (req, res) {
 
     let student = await StudentModel.create(data);
 
-    res.status(201).send({ status: true, message: "User created Successfully", data: student });
+    return res.status(201).send({ status: true, message: "User created Successfully", data: student });
 
   }
 
@@ -162,8 +162,8 @@ const updateDetails = async (req, res) => {
     return res.status(200).send({ status: true, message: "Successful", data: updateData })
   } catch (error) {
     console.log(error)
-    return res.status(500).send({ status: false, error: error.message })
-  }
+    return res.status(500).send({ status: false, error: error.message })
+  }
 }
 
 
@@ -190,7 +190,7 @@ const deleteStudents = async (req, res) => {
       { new: true });
 
 
-    return res.status(200).send({ status: true, message: "Product deleted successfully.", data: deletedStudent });
+    return res.status(200).send({ status: true, message: "Student deleted successfully.", data: deletedStudent });
 
   } catch (err) {
     console.log(err)

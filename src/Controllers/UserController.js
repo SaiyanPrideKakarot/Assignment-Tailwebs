@@ -125,7 +125,7 @@ const loginUser = async function (req, res) {
         .send({ status: false, message: "User not found with this Email" });
     }
 
-    let userPassword = await bcrypt.compareSync(body.password, user.password);
+    let userPassword = bcrypt.compareSync(body.password, user.password);
 
     if (!userPassword) {
       return res
